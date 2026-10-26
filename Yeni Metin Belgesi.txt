@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunucu Adı | Discord Topluluğu</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: #0c0d14;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: radial-gradient(circle at 50% 10%, rgba(88, 101, 242, 0.15) 0%, transparent 60%);
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Avatar / Sunucu Logosu */
+        .avatar-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid #5865F2;
+            object-fit: cover;
+            box-shadow: 0 0 25px rgba(88, 101, 242, 0.4);
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 20px rgba(88, 101, 242, 0.4); }
+            50% { box-shadow: 0 0 35px rgba(88, 101, 242, 0.7); }
+            100% { box-shadow: 0 0 20px rgba(88, 101, 242, 0.4); }
+        }
+
+        /* Başlıklar */
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        h1 i {
+            color: #5865F2;
+            font-size: 22px;
+        }
+
+        .bio {
+            color: #949ba4;
+            font-size: 14px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* Butonlar / Link Listesi */
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 14px 20px;
+            border-radius: 14px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .link-btn i.left-icon {
+            font-size: 20px;
+            margin-right: 12px;
+            color: #b5bac1;
+            transition: color 0.3s;
+        }
+
+        .link-content {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            text-align: left;
+        }
+
+        .link-btn:hover {
+            background: rgba(88, 101, 242, 0.15);
+            border-color: #5865F2;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .link-btn:hover i.left-icon {
+            color: #5865F2;
+        }
+
+        .link-btn:hover i.fa-arrow-right {
+            transform: translateX(4px);
+        }
+
+        .link-btn i.fa-arrow-right {
+            color: #949ba4;
+            font-size: 14px;
+            transition: transform 0.3s;
+        }
+
+        /* Özel Discord Ana Katılım Butonu */
+        .link-btn.discord-main {
+            background: #5865F2;
+            border-color: #5865F2;
+        }
+
+        .link-btn.discord-main i {
+            color: #ffffff !important;
+        }
+
+        .link-btn.discord-main:hover {
+            background: #4752c4;
+            border-color: #4752c4;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #6d6f78;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sunucu Logosu -->
+        <div class="avatar-container">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200&h=200&fit=crop" alt="Sunucu Logo" class="avatar">
+        </div>
+
+        <!-- Sunucu Adı ve Açıklaması -->
+        <h1>Sunucu Adı <i class="fa-solid fa-circle-check" title="Onaylı Topluluk"></i></h1>
+        <p class="bio">🚀 Türkiye'nin en aktif topluluk ve oyun sunucusuna hoş geldin! Etkinlikler, çekilişler ve dostluklar burada seni bekliyor.</p>
+
+        <!-- Linkler Alanı -->
+        <div class="links-list">
+            <!-- Discord Ana Davet Butonu -->
+            <a href="https://discord.gg/DAVETKODU" target="_blank" class="link-btn discord-main">
+                <div class="link-content">
+                    <i class="fa-brands fa-discord left-icon"></i>
+                    <span>Discord Sunucusuna Katıl</span>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <!-- Kurallar / Website -->
+            <a href="#" target="_blank" class="link-btn">
+                <div class="link-content">
+                    <i class="fa-solid fa-book left-icon"></i>
+                    <span>Sunucu Kuralları & Rehber</span>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <!-- YouTube / Sosyal Medya -->
+            <a href="#" target="_blank" class="link-btn">
+                <div class="link-content">
+                    <i class="fa-brands fa-youtube left-icon" style="color: #FF0000;"></i>
+                    <span>YouTube Kanalımız</span>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <!-- Instagram / TikTok -->
+            <a href="#" target="_blank" class="link-btn">
+                <div class="link-content">
+                    <i class="fa-brands fa-instagram left-icon" style="color: #E1306C;"></i>
+                    <span>Instagram / TikTok</span>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2026 Sunucu Adı. Tüm hakları saklıdır.
+        </footer>
+    </div>
+
+</body>
+</html>
